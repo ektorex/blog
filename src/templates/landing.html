@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="hero">
+  <div class="hero-text">
+    <h1>Bienvenido a mi Blog</h1>
+    <p>Un espacio para compartir artículos, ideas y conocimiento.</p>
+
+
+<h2>Articulos Interesantes</h2>
+    {% for art in articles %}
+        <div>
+          <h2>{{ art[1] }}</h2>
+          <h3>{{ art[3] }}</h3>
+          <h4>{{ art[2] }}</h4>
+        </div>
+    {% endfor %}
+
+    <a href="{{ url_for('home') }}" class="btn">Entrar al Blog</a>
+  </div>
+</section>
+
+<section class="features">
+  <div class="feature">
+    <h2>📚 Artículos</h2>
+    <p>Explora publicaciones escritas por diferentes usuarios.</p>
+  </div>
+  <div class="feature">
+    <h2>💬 Comentarios</h2>
+    <p>Participa y comparte tus ideas en cada artículo.</p>
+  </div>
+  <div class="feature">
+    <h2>🏷️ Categorías & Tags</h2>
+    <p>Encuentra contenido organizado y fácil de navegar.</p>
+  </div>
+</section>
+{% endblock %}
+

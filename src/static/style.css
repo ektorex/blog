@@ -1,0 +1,128 @@
+body {
+    font-family:"Times New Roman", Times, serif;
+    margin: 0;
+    padding: 0;
+    background: grey;
+}
+
+header {
+    background: #333;
+    color: white;
+    padding: 1rem;
+}
+
+header nav a {
+    color: white;
+    margin-right: 1rem;
+    text-decoration: none;
+}
+
+main {
+    padding: 2rem;
+}
+
+footer {
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+    background: linear-gradient(to right, #667eea, #764ba2);
+    color: white;
+    text-align: center;
+    padding: 2rem;
+}
+
+.hero-text h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.hero-text p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.btn {
+    background: white;
+    color: #333;
+    padding: 0.8rem 1.5rem;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #f4f4f9;
+    transform: scale(1.05);
+}
+
+/* Features */
+.features {
+    display: flex;
+    justify-content: space-around;
+    padding: 3rem 1rem;
+    background: #f9f9f9;
+}
+
+.feature {
+    max-width: 300px;
+    text-align: center;
+}
+
+.feature h2 {
+    color: #667eea;
+    margin-bottom: 1rem;
+}
+
+
+/* Estilo general del contenedor */
+div {
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 20px;
+
+  /* Fondo y bordes */
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+
+  /* Transición al pasar el mouse */
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Efecto hover */
+div:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Títulos */
+div h2 {
+  font-size: 1.4rem;
+  color: #222;
+  margin-bottom: 8px;
+}
+
+div h3 {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 6px;
+}
+
+div h4 {
+  font-size: 0.9rem;
+  color: #888;
+}
+

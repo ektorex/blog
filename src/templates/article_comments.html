@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Comentarios del artículo</h2>
+<ul>
+    {% for c in comentarios %}
+        <li>
+            <strong>{{ c[1] }}</strong> ({{ c[2] }}) - {{ c[3] }}
+        </li>
+    {% endfor %}
+</ul>
+
+<h3>➕ Agregar comentario</h3>
+<form method="POST" action="{{ url_for('crear_comentario_form', article_id=article_id) }}">
+    <label>ID Usuario:</label><br>
+    <input type="number" name="user_id" required><br><br>
+    <label>Nombre:</label><br>
+    <input type="text" name="name" required><br><br>
+    <label>URL:</label><br>
+    <input type="url" name="url"><br><br>
+    <button type="submit">Comentar</button>
+</form>
+{% endblock %}
+

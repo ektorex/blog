@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Artículos de {{ usuario }}</h2>
+<ul>
+    {% for art in articulos %}
+        <li>
+            <a href="{{ url_for('ver_comentarios_articulo', article_id=art[0]) }}">
+                {{ art[1] }} - {{ art[2] }}
+            </a>
+        </li>
+    {% endfor %}
+</ul>
+
+<h3>➕ Crear nuevo artículo</h3>
+<form method="POST" action="{{ url_for('crear_articulo_form', user_id=user_id) }}">
+    <label>Título:</label><br>
+    <input type="text" name="title" required><br><br>
+    <label>Contenido:</label><br>
+    <textarea name="text" rows="5" cols="40" required></textarea><br><br>
+    <button type="submit">Publicar</button>
+</form>
+{% endblock %}
+
